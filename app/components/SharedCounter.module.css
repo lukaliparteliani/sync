@@ -1,0 +1,111 @@
+.container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.counterDisplay {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 32px 48px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.value {
+  font-size: 64px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  gap: 16px;
+}
+
+.incrementBtn,
+.decrementBtn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.incrementBtn {
+  background: #28a745;
+  color: white;
+}
+
+.incrementBtn:hover {
+  background: #218838;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+}
+
+.incrementBtn:active {
+  transform: scale(0.95);
+}
+
+.decrementBtn {
+  background: #dc3545;
+  color: white;
+}
+
+.decrementBtn:hover {
+  background: #c82333;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
+}
+
+.decrementBtn:active {
+  transform: scale(0.95);
+}
+
+.metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.metaItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.metaLabel {
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.metaValue {
+  color: #2c3e50;
+  font-weight: 600;
+}
