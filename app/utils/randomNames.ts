@@ -1,4 +1,4 @@
-const alliance = ["Death Knight", "Druid", "Hunter", "Mage", "Paladin"];
+const alliance = ["DeathKnight", "Druid", "Hunter", "Mage", "Paladin"];
 
 const horde = ["Priest", "Rogue", "Shaman", "Warlock", "Warrior"];
 
