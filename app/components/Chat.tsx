@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import Avatar from 'react-avatar';
 import { Message, User } from '../types';
 import styles from './Chat.module.css';
 
@@ -143,6 +144,14 @@ export default function Chat({
                 key={message.id}
                 className={`${styles.messageWrapper} ${isOwnMessage ? styles.ownMessage : ''}`}
               >
+                {!isOwnMessage && (
+                  <Avatar
+                    name={message.username}
+                    size="32"
+                    round={true}
+                    className={styles.messageAvatar}
+                  />
+                )}
                 <div className={`${styles.message} ${isExpired ? styles.expired : ''}`}>
                   <div className={styles.messageHeader}>
                     <span className={styles.username}>{message.username}</span>
@@ -168,6 +177,16 @@ export default function Chat({
                     </button>
                   )}
                 </div>
+                {isOwnMessage && (
+                  <Avatar
+                    name={message.username}
+                    size="32"
+                    round={true}
+                    className={styles.messageAvatar}
+                    color="#ffffff"
+                    fgColor="#667eea"
+                  />
+                )}
               </div>
             );
           })

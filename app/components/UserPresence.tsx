@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Avatar from 'react-avatar';
 import { User } from '../types';
 import styles from './UserPresence.module.css';
 
@@ -40,9 +41,14 @@ export default function UserPresence({ users, currentUserId, typingUsers }: User
               className={`${styles.userItem} ${isCurrentUser ? styles.currentUser : ''}`}
             >
               <div className={styles.userInfo}>
-                <div className={styles.userAvatar}>
-                  {user.username.charAt(0).toUpperCase()}
-                </div>
+                <Avatar
+                  name={user.username}
+                  size="40"
+                  round={true}
+                  className={styles.userAvatar}
+                  color={isCurrentUser ? '#ffffff' : undefined}
+                  fgColor={isCurrentUser ? '#667eea' : '#ffffff'}
+                />
                 <div className={styles.userDetails}>
                   <span className={styles.username}>
                     {user.username}
